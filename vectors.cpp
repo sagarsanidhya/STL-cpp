@@ -39,5 +39,40 @@ int main() {
     it = it + 2; //shifted 2 position
     cout<< *it<< endl;
 
+    //vector<int>::iterator it = v.end(); //points right after last element
+
+    //vector<int>::iterator it = v.rend(); //reverse end point before the 1st element
+
+    //vector<int>::iterator it = v.rbegin(); //reverse begin point at end element
+
+    cout << v[0] << " " << v.at(0);
+    cout << v.back() << " "; // element at the back of the vector
+
+    //for printing the elements of the vector jsut acess it via the index looping like
+
+    for (vector<int>::iterator it = v.begin(); it != v.end(); it++){
+        cout << *it << " " <<endl;
+    }
+    //datatype is automatic assign the data type same as element type
+    for(auto it = v.begin(); it != v.end(); it++){ // protect us from writing long syntax
+        cout << *it << " ";
+    }
+
+    for (auto it: v){  //auto means iterate over the elements
+        cout << it << " ";
+    }
+
+    //------------------------------
+
+    //deletion in a vector
+
+    v.erase(v.begin()+1); //begin + 1 address
+
+    //erase multiple elements
+
+    v.erase(v.begin()+1, v.begin()+3); //begin + 1 address to begin + 3 address //start and end address
+
+
+
     return 0;
 }
